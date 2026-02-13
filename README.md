@@ -484,6 +484,11 @@ Publish workflow.
 ---
 
 # 📊 STEP 11 — Hubungkan ke Power BI (DirectQuery)
+Docs Power BI dapat Direct Query Menggunakan PostgreSQL:
+https://learn.microsoft.com/id-id/power-bi/report-server/data-sources
+
+Detailnya dapat dilihat pada link berikut:
+https://dev.to/jenniekibiri/how-to-connect-supabase-to-microsoft-power-bi-50p8
 
 ## Download SSL Certificate
 
