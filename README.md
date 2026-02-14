@@ -96,7 +96,7 @@ Sekarang n8n sudah siap dipakai.
 ---
 
 # 📄 STEP 2 — Buat Google Spreadsheet
-
+Akses Spreadsheet yang sudah dibuat: https://docs.google.com/spreadsheets/d/1aGhMRQGWnxdecq0F4E7g_4-REdpb-CHO7VTnBwA82iA/edit?usp=sharing
 Buat spreadsheet baru.
 
 Buat 2 sheet:
@@ -378,6 +378,8 @@ Sekarang sheet Cleaned_Data hanya berisi data yang benar-benar bersih.
 
 ---
 
+NOTE: untuk mengakses database yang sudah ready boleh email ke nicholasnelson71@gmail.com ya 
+untuk bisa invite akses ke organization dari Supabase yang saya miliki
 # 🗄 STEP 8 — Setup Supabase Database
 
 ## 1️⃣ Install PostgreSQL
