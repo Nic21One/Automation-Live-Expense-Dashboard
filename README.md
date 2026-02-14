@@ -456,12 +456,13 @@ Struktur:
 | Column | Type |
 |--------|------|
 | id | int8 (Primary Key) |
-| date | date |
-| category | varchar |
-| description | text |
-| amount | int8 |
-| payment_method | varchar |
-| mood | varchar |
+| Date | date |
+| Category | varchar |
+| Description | text |
+| Amount | int8 |
+| Payment_method | varchar |
+| Mood | varchar |
+| created_at | timestampz |
 
 Klik Create.
 
