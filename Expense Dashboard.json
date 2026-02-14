@@ -40,12 +40,6 @@
               "name": "Mood",
               "value": "={{ $json.Mood ? $json.Mood.trim().toLowerCase() : \"unknown\" }}",
               "type": "string"
-            },
-            {
-              "id": "afb23787-0d9f-4630-8db3-3503b0a3749b",
-              "name": "",
-              "value": "",
-              "type": "string"
             }
           ]
         },
@@ -177,15 +171,6 @@
               "canBeUsedToMatch": true
             },
             {
-              "id": "Payment Method",
-              "displayName": "Payment Method",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true
-            },
-            {
               "id": "row_number",
               "displayName": "row_number",
               "required": false,
@@ -299,15 +284,6 @@
             {
               "id": "Mood",
               "displayName": "Mood",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Payment Method",
-              "displayName": "Payment Method",
               "required": false,
               "defaultMatch": false,
               "display": true,
@@ -497,8 +473,7 @@
               "defaultMatch": true,
               "display": true,
               "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": false
+              "canBeUsedToMatch": true
             },
             {
               "id": "Date",
@@ -507,8 +482,7 @@
               "defaultMatch": false,
               "display": true,
               "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": false
+              "canBeUsedToMatch": true
             },
             {
               "id": "Category",
@@ -517,8 +491,7 @@
               "defaultMatch": false,
               "display": true,
               "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": false
+              "canBeUsedToMatch": true
             },
             {
               "id": "Description",
@@ -527,8 +500,7 @@
               "defaultMatch": false,
               "display": true,
               "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": false
+              "canBeUsedToMatch": true
             },
             {
               "id": "Amount",
@@ -537,8 +509,7 @@
               "defaultMatch": false,
               "display": true,
               "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": false
+              "canBeUsedToMatch": true
             },
             {
               "id": "Payment_Method",
@@ -547,8 +518,7 @@
               "defaultMatch": false,
               "display": true,
               "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": false
+              "canBeUsedToMatch": true
             },
             {
               "id": "Mood",
@@ -557,8 +527,7 @@
               "defaultMatch": false,
               "display": true,
               "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": false
+              "canBeUsedToMatch": true
             }
           ],
           "attemptToConvertTypes": false,
@@ -587,7 +556,7 @@
           "__rl": true,
           "value": "1aGhMRQGWnxdecq0F4E7g_4-REdpb-CHO7VTnBwA82iA",
           "mode": "list",
-          "cachedResultName": "First Project#1_Automation Dashboard",
+          "cachedResultName": "Expense Dashboard",
           "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1aGhMRQGWnxdecq0F4E7g_4-REdpb-CHO7VTnBwA82iA/edit?usp=drivesdk"
         },
         "sheetName": {
@@ -697,6 +666,16 @@
               "display": true,
               "type": "string",
               "canBeUsedToMatch": false
+            },
+            {
+              "id": "created_at",
+              "displayName": "created_at",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "dateTime",
+              "canBeUsedToMatch": false,
+              "removed": false
             }
           ],
           "attemptToConvertTypes": false,
@@ -735,6 +714,144 @@
       ],
       "id": "bf2f8856-b96b-4d03-8ca0-2150a772e316",
       "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "operation": "upsert",
+        "schema": {
+          "__rl": true,
+          "mode": "list",
+          "value": "public"
+        },
+        "table": {
+          "__rl": true,
+          "value": "expense",
+          "mode": "list",
+          "cachedResultName": "expense"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {},
+          "matchingColumns": [
+            "id"
+          ],
+          "schema": [
+            {
+              "id": "id",
+              "displayName": "id",
+              "required": false,
+              "defaultMatch": true,
+              "display": true,
+              "type": "number",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Date",
+              "displayName": "Date",
+              "required": true,
+              "defaultMatch": false,
+              "display": true,
+              "type": "dateTime",
+              "canBeUsedToMatch": false
+            },
+            {
+              "id": "Category",
+              "displayName": "Category",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": false
+            },
+            {
+              "id": "Description",
+              "displayName": "Description",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": false
+            },
+            {
+              "id": "Amount",
+              "displayName": "Amount",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "number",
+              "canBeUsedToMatch": false
+            },
+            {
+              "id": "Payment_Method",
+              "displayName": "Payment_Method",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": false
+            },
+            {
+              "id": "Mood",
+              "displayName": "Mood",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": false
+            },
+            {
+              "id": "created_at",
+              "displayName": "created_at",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "dateTime",
+              "canBeUsedToMatch": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.6,
+      "position": [
+        2192,
+        0
+      ],
+      "id": "435742cb-a8dd-451d-9dc3-c67b0aa0b57b",
+      "name": "Insert or update rows in a table1",
+      "credentials": {
+        "postgres": {
+          "id": "6Oe9YCoCXrNNYCHE",
+          "name": "Postgres account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "188a8adb-9fe5-46bc-bd17-13ccdda03002",
+              "name": "created_at",
+              "value": "={{ new Date().toLocaleString('sv-SE', { timeZone: 'Asia/Jakarta' }).replace(' ', 'T') }}",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        2000,
+        0
+      ],
+      "id": "465e5d34-96a4-4441-ba2a-b3955a25abd7",
+      "name": "Created At Timestamp"
     }
   ],
   "pinData": {},
@@ -840,7 +957,13 @@
     },
     "Insert or update rows in a table": {
       "main": [
-        []
+        [
+          {
+            "node": "Created At Timestamp",
+            "type": "main",
+            "index": 0
+          }
+        ]
       ]
     },
     "Schedule Trigger": {
@@ -848,6 +971,17 @@
         [
           {
             "node": "Get row(s) in Data sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Created At Timestamp": {
+      "main": [
+        [
+          {
+            "node": "Insert or update rows in a table1",
             "type": "main",
             "index": 0
           }
@@ -861,7 +995,7 @@
     "binaryMode": "separate",
     "availableInMCP": false
   },
-  "versionId": "e0ace39c-21d3-4cff-bc51-0080289661d7",
+  "versionId": "bb9a19fd-69e4-4a17-9658-db5a6d80a808",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "bd4277c6b186ef88cb38fc373752d9ea3091bba9eebe68264736bbbb3165567d"
